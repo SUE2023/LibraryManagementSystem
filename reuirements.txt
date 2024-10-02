@@ -1,3 +1,16 @@
+python3 -m venv LibraryManagementSystem
+source LibraryManagementSystem/bin/activate
+#install flask
+pip install Flask
+flask --version # verify instalation
+# install additional dependencies
+# install Flask-CORS: To handle cross-origin requests from mobile devices.
+pip install Flask-CORS
+# install Flask-Login or Flask-JWT for login authentication
+pip install Flask-Login
+pip install Flask-SQLAlchemy
+#pip install mysqlclient  # recommended for production
+pip install pymysql  # pure python connector
 #install mySQL
 sudo apt update  # update package index
 sudo apt install mysql-server # install 
@@ -5,9 +18,9 @@ sudo mysql_secure_installation  # secure installation. Follow the prompts to set
 #keep track of the root password set during installation, as it'll be needed it to log in.
 sudo service mysql start  # Start MySQL Service:
 mysql -u root -p # Log into MySQL:
-
-
 pip install SQLAlchemy
 pip install mysqlclient #  MySQL Driver
 # mysql-devel or libmysqlclient-dev. can be used in instead of pip install mysqlclient
 'mysql+mysqldb://user:password@localhost/LMS' # Link MySQL Driver with SQLAlchemy: In your db_storage.py (or any file where you set up the connection), you specify the driver in the connection string. LMS is db name
+
+# install Bootstrap: For responsive web design to work on iOS/Android browsers
