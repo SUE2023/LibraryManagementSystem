@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+</head>
+<body>
+    <h1>Member Area</h1>
+
+    <p>Welcome, {{ member_name }}!</p>
+    <p>Email: {{ member_email }}</p>
+
+    <h2>Your Borrowed Books</h2>
+    <ul>
+        {% for book in borrowed_books %}
+            <li>{{ book.title }} by {{ book.author }}</li>
+        {% else %}
+            <li>You have not borrowed any books.</li>
+        {% endfor %}
+    </ul>
+
+    <a href="/logout">Logout</a>
+</body>
+</html>

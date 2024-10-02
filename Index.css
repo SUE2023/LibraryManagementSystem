@@ -1,5 +1,15 @@
 *
 { 
-	margin = 400;
-	padding = 20;
+	margin : 0;
+	padding : 0;
+}
+
+wrapper
+{
+	margin : 60px auto;
+	width : 500px;
+	display : webkit-box;
+	-webkit-box-orient : vertical;
+	-webkit-box-flex : 1;
+	
 }

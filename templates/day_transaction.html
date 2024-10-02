@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transactions of the Day</title>
+</head>
+<body>
+    <h1>Transactions of {{ date_today }}</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Transaction ID</th>
+                <th>Member Name</th>
+                <th>Book Title</th>
+                <th>Transaction Type</th>
+                <th>Date & Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% if transactions_today %}
+                {% for transaction in transactions_today %}
+                    <tr>
+                        <td>{{ transaction.id }}</td>
+                        <td>{{ transaction.member_name }}</td>
+                        <td>{{ transaction.book_title }}</td>
+                        <td>{{ "Borrowed" if transaction.transaction_type == "borrow" else "Returned" }}</td>
+                        <td>{{ transaction.timestamp }}</td>
+                    </tr>
+                {% endfor %}
+            {% else %}
+                <tr>
+                    <td colspan="5">No transactions for today.</td>
+                </tr>
+            {% endif %}
+        </tbody>
+    </table>
+
+    <a href="/">Back to Home</a>
+</body>
+</html>

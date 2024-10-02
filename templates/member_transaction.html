@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+</head>
+<body>
+    <h1>Transaction History for {{ member_name }}</h1>
+
+    <ul>
+        {% for transaction in transactions %}
+            <li>
+                Book: {{ transaction.book_title }}<br>
+                Status: {{ "Rented" if transaction.status == "rented" else "Returned" }}<br>
+                Date: {{ transaction.date }}
+            </li>
+        {% else %}
+            <li>No transactions found.</li>
+        {% endfor %}
+    </ul>
+
+    <a href="/">Back to Home</a>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+</head>
+<body>
+    <h1>Available Books</h1>
+
+    <ul>
+        {% for book in books %}
+            <li>
+                <strong>{{ book.title }}</strong> by {{ book.author }}<br>
+                Status: {{ "Available" if book.is_available else "Not Available" }}<br>
+                {% if book.is_available %}
+                    <a href="/borrow/{{ book.id }}">Borrow</a>
+                {% endif %}
+            </li>
+        {% else %}
+            <li>No books available at the moment.</li>
+        {% endfor %}
+    </ul>
+
+    <a href="/">Back to Home</a>
+</body>
+</html>

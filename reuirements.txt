@@ -1,0 +1,13 @@
+#install mySQL
+sudo apt update  # update package index
+sudo apt install mysql-server # install 
+sudo mysql_secure_installation  # secure installation. Follow the prompts to set the root password and secure your installation.
+#keep track of the root password set during installation, as it'll be needed it to log in.
+sudo service mysql start  # Start MySQL Service:
+mysql -u root -p # Log into MySQL:
+
+
+pip install SQLAlchemy
+pip install mysqlclient #  MySQL Driver
+# mysql-devel or libmysqlclient-dev. can be used in instead of pip install mysqlclient
+'mysql+mysqldb://user:password@localhost/LMS' # Link MySQL Driver with SQLAlchemy: In your db_storage.py (or any file where you set up the connection), you specify the driver in the connection string. LMS is db name
