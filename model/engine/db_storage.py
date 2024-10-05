@@ -18,7 +18,7 @@ classes = {"Book": Book, "Member": Member, "Transaction": Transaction}
 
 
 class DBStorage:
-    """interaacts with the MySQL database"""
+    """interacts with the MySQL database"""
     __engine = None
     __session = None
 
