@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+	<link rel="Script" href="Script.js">
+    <title>Register</title>
+</head>
+<body class="registration-form">
+	<form id="registrationForm">
+    	<h1>Register</h1>
+    	<input type="text" placeholder="Full Name" required />
+    	<input type="email" placeholder="Email" required />
+    	<input type="password" placeholder="Password" required />
+    
+    	<label for="role">Select Role:</label>
+    	<select id="role" onchange="handleRoleChange()">
+	<br>
+        	<option value="user">User</option>
+        	<option value="vendor">Vendor</option>
+        	<option value="admin">Admin</option>
+    	</select>
+	<br>
+
+    	<!-- Additional fields for Vendors -->
+    	<div id="vendorFields" style="display: none;">
+        	<input type="text" placeholder="Business Name" />
+        	<input type="text" placeholder="Tax ID" />
+    	</div>
+	<br>
+
+    		<button type="submit">Register</button>
+	</form>
+</body>
+</html>

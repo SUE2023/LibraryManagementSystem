@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """ Index """
-from models.member import Member
-from models.book import Book
-from models.transaction import Transaction
+from models.Member import Member
+from models.Book import Book
+from models.Transaction import Transaction
 #from models.user import User
 from models import storage
 from api.v1.views import app_views

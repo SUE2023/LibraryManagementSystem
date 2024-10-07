@@ -1,8 +1,14 @@
 #!/usr/bin/env python3
 """ Book model"""
 
+from datetime import datetime
+import models
+from sqlalchemy import Column, String, DateTime, Integer, Float
+from models.BaseModel import BaseModel
+from sqlalchemy.ext.declarative import declarative_base
 
-class Book(BaseModel, Base):
+
+class Book(BaseModel):
     """Book class inheriting from BaseModel and representing a Book"""
     
     if models.storage_t == "db":

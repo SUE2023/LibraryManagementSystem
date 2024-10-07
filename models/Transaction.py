@@ -1,11 +1,14 @@
 #!/usr/bin/env python3
 """ Transaction model"""
 
-from sqlalchemy import Column, String, Integer, Float
 from datetime import datetime
 import models
+from sqlalchemy import Column, String, DateTime, Integer, Float
+from models.BaseModel import BaseModel
+from sqlalchemy.ext.declarative import declarative_base
 
-class Transaction(BaseModel, Base):
+
+class Transaction(BaseModel):
     """Transaction class inheriting from BaseModel and representing a Transaction"""
 
     if models.storage_t == "db":

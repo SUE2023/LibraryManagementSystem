@@ -5,10 +5,10 @@ Contains the FileStorage class
 
 import json
 import models
-from models.base_model import BaseModel
-from models.member import Member
-from models.book import Book
-from models.transaction import Transaction
+from models.BaseModel import BaseModel
+from models.Member import Member
+from models.Book import Book
+from models.Transaction import Transaction
 
 
 classes = {"BaseModel": BaseModel, "Member": Member,
@@ -40,18 +40,18 @@ class FileStorage:
             self.__objects[key] = obj
 
     def save(self):
-    """serializes __objects to the JSON file (path: __file_path)"""
-    json_objects = {}
-    for key in self.__objects:
+        """serializes __objects to the JSON file (path: __file_path)"""
+        json_objects = {}
+        for key in self.__objects:
         # Convert each object to a dictionary for JSON serialization
-        json_objects[key] = self.__objects[key].to_dict(save_fs=1)
+            json_objects[key] = self.__objects[key].to_dict(save_fs=1)
 
-    # Write the serialized objects to the JSON file
-    try:
-        with open(self.__file_path, 'w') as f:
-            json.dump(json_objects, f)
-    except IOError as e:
-        print(f"Error saving to file: {e}")
+        # Write the serialized objects to the JSON file
+        try:
+            with open(self.__file_path, 'w') as f:
+                json.dump(json_objects, f)
+        except IOError as e:
+            print(f"Error saving to file: {e}")
             
     def reload(self):
         """deserializes the JSON file to __objects"""

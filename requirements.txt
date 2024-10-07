@@ -5,12 +5,26 @@ pip install Flask
 flask --version # verify instalation
 # install additional dependencies
 # install Flask-CORS: To handle cross-origin requests from mobile devices.
-pip install Flask-CORS
+pip install flask-cors
+# Verify Installation of flask-cors
+pip show flask-cors
+# Install Flasgger Using pip
+pip install flasgger
+# Verify Installation
+pip show flasgger
+#install PyYAML: PyYAML is often needed for Flasgger to process YAML files.
+pip install pyyaml
 # install Flask-Login or Flask-JWT for login authentication
-pip install Flask-Login
-pip install Flask-SQLAlchemy
+pip install flask-login
+#Verify Installation
+pip show flask-login
+#install Flask-SQLAlchemy
+pip install flask-sqlalchemy
+#Verify Installation
+pip show flask-sqlalchemy
 #pip install mysqlclient  # recommended for production
-pip install pymysql  # pure python connector
+#pip install pymysql: pure python connector
+pip install pymysql
 #install mySQL
 sudo apt update  # update package index
 sudo apt install mysql-server # install 
@@ -24,3 +38,8 @@ pip install mysqlclient #  MySQL Driver
 'mysql+mysqldb://user:password@localhost/LMS' # Link MySQL Driver with SQLAlchemy: In your db_storage.py (or any file where you set up the connection), you specify the driver in the connection string. LMS is db name
 
 # install Bootstrap: For responsive web design to work on iOS/Android browsers
+# crete virtual environment
+# active virtual environment
+# install  requirements: pip install flask flasgger flask-cors
+# run application*method recommended on virtual environemt: python3 app.py
+#deactive 

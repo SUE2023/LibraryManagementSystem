@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-""" Basemode """
+""" Basemodel """
 
 
 from datetime import datetime
@@ -18,8 +18,9 @@ else:
     Base = object
 
   
-def BaseModel:
+class BaseModel(Base):
     """ Basemodel class from which future class will inherit """
+    __abstract__ = True
     if models.storage_t == "db":
         id = Column(String(60), primary_key=True)
         created_at = Column(DateTime, default=datetime.utcnow)
@@ -73,4 +74,4 @@ def BaseModel:
 
     def delete(self):
         """delete the current instance from the storage"""
-        models.storage.delete(self)    
+        models.storage.delete(self)
