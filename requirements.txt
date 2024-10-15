@@ -12,7 +12,7 @@ sudo apt install mysql-server
 sudo mysql_secure_installation 
 sudo service mysql start 
 mysql -u root -p 
-install SQLAlchemy
+install sqlalchemy
 install mysqlclient 
 'mysql+mysqldb://user:2024@Github@localhost/LMS'
 
